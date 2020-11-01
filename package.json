@@ -8,6 +8,8 @@
     "build": "webpack-cli --config webpack.config.js",
     "test": "jest"
   },
+  "engines" : { "node" : ">=0.12" },
+  "engineStrict": true,
   "author": "",
   "license": "ISC",
   "dependencies": {
