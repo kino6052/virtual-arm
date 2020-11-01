@@ -50,6 +50,11 @@ const broadcast = (message) => {
   });
 };
 
+setInterval(() => {
+  broadcast(JSON.stringify({ type: "keep-alive"}));
+  console.warn("keep-alive");
+}, 1000);
+
 wss.on("connection", function connection(ws) {
   DebugSubject.next("connection!");
   ws.on("message", function incoming(message) {
